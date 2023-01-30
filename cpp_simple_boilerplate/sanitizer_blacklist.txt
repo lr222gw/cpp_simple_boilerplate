@@ -1,0 +1,9 @@
+ 
+### lines with one # are examples...
+### Ignore exactly this function (the names are mangled)
+# fun:MyFooBar
+### Ignore MyFooBar(void) if it is in C++:
+# fun:_Z8MyFooBarv
+### Ignore all function containing MyFooBar
+# fun:*MyFooBar*
+

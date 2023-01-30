@@ -1,0 +1,250 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        //Clang format...
+        "clang-format.executable": "clang-format",
+        "clang-format.assumeFilename": ".clang-format",
+        "editor.formatOnSave": true,
+        "terminal.integrated.scrollback": 10000,
+        "clangd.arguments": [
+            "--header-insertion=never"
+        ],
+        "cmake.configureOnOpen": false,
+        "debug.allowBreakpointsEverywhere": true,
+        "debug.openDebug": "openOnSessionStart",
+        "[cpp]": {
+            "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+        },
+        "editor.detectIndentation": false,
+        "task.autoDetect": "off",
+        "debug.console.closeOnEnd": true,
+        "debug.openExplorerOnEnd": true,
+        "workbench.editor.scrollToSwitchTabs": true,
+        "window.menuBarVisibility": "toggle",
+        "window.titleBarStyle": "custom",
+        "debug.inlineValues": "on",
+        "C_Cpp.intelliSenseEngine": "Disabled",
+        "CppHelper.SourceNotFoundBehavior": "Create source file",
+        "debug.showBreakpointsInOverviewRuler": true,
+        "debug.terminal.clearBeforeReusing": true,
+        "editor.cursorBlinking": "expand",
+        "files.associations": {
+            "*.flex": "lex",
+            "*.yy": "bison"
+        },
+        "c-cpp-flylint.clang.blocks": false,
+        "c-cpp-flylint.lizard.enable": false,
+        "c-cpp-flylint.flexelint.enable": false,
+        "c-cpp-flylint.clang.configFile": ".clang-tidy",
+        "c-cpp-flylint.clang.enable": false,
+        "c-cpp-flylint.cppcheck.suppressions": [
+            "unusedStructMember",
+            "unreadVariable",
+            "knownConditionTrueFalse", /// Might be good, but annoying when using a macro for either debug or non-debug mode...
+            "cstyleCast" /// Already covered by Clang-Tidy...
+        ],
+        "c-cpp-flylint.excludeFromWorkspacePaths": [
+            "deps"
+        ],
+        "editor.peekWidgetDefaultFocus": "editor",
+        "editor.minimap.scale": 1,
+        "editor.minimap.maxColumn": 50,
+        "editor.minimap.renderCharacters": false,
+        "window.zoomLevel": -1,
+        "gitlens.views.commits.files.layout": "list",
+        "activitusbar.combineWorkspaceSettings": true,
+        "activitusbar.views": [
+            {
+                "name": "explorer",
+                "codicon": "explorer-view-icon"
+            },
+            {
+                "name": "command.workbench.view.extension.cmake__viewContainer",
+                "codicon": "project",
+                "tooltip": "Cmake Project"
+            },
+            {
+                "name": "search",
+                "codicon": "search-view-icon"
+            },
+            {
+                "name": "scm",
+                "codicon": "source-control-view-icon"
+            },
+            {
+                "name": "command.git-graph.view",
+                "codicon": "git-compare",
+                "tooltip": "git-graph"
+            },
+            {
+                "name": "debug",
+                "codicon": "run-view-icon"
+            },
+            {
+                "name": "extensions",
+                "codicon": "extensions-view-icon"
+            },
+        ],
+        "git.fetchOnPull": true,
+        //"activitusbar.toggleSidebar": false
+        "git-graph.showStatusBarItem": true,
+        "taskExplorer.showLastTasks": false,
+        "files.exclude": {
+            "**/.git": false,
+            "**/.svn": false,
+            "**/.hg": false,
+            "**/CVS": false,
+            "**/.DS_Store": false,
+            "**/Thumbs.db": false,
+            "**/.idea": false,
+            ".idea": false,
+            "**/.cache": false,
+            ".cache": false,
+            "**/_LICENSES": false,
+            "_LICENSES": false,
+            ".vscode": false,
+            ".clang-tidy-ignore": false,
+            "3D_VEngine.code-workspace": false,
+            "README_VSCODE_CLANGD_PROBLEMS.txt": false,
+            ".clangd": false,
+            ".gitignore": false,
+            "**/.gitignore": false,
+            "assets/shaders/history_blob": false,
+            "assets/shaders/compile_shaders.sh": false
+        },
+        "explorerExclude.backup": {},
+        "workspace.isHidden": false,
+        "output.smartScroll.enabled": false, // annoying...
+        "glsllint.glslangValidatorArgs": "-V",
+        "shaderc-lint.defaultGLSLVersion": "450",
+        "shaderc-lint.shadercOutputDir": "assets/shaders/",
+        "cmake.configureArgs": [
+            "-DCMAKE_BUILD_TYPE=cmake_project",
+            "-DCMAKE_CXX_COMPILER=clang++"
+        ],
+        //"cmake.generator": "Unix Makefiles",     //TODO: how do we make this different between platforms?...
+        "cmake.generator": "Ninja", //TODO: how do we make this different between platforms?...
+        "cmake.buildDirectory": "${workspaceFolder}/build/cmake_project",
+        "cmake.copyCompileCommands": "${workspaceFolder}/build/compile_commands.json",
+        "glsl-linter.validatorArgs": [
+            "-V"
+        ],
+        "glsl-linter.validatorPath": "glslangValidator",
+        "file_peek.activeLanguages": [
+            "typescript",
+            "javascript",
+            "python",
+            "c++",
+            "c"
+        ],
+        "file_peek.searchFileExtensions": [
+            ".js",
+            ".ts",
+            ".html",
+            ".css",
+            ".scss",
+            ".h",
+            ".cpp",
+            ".c",
+            ".cc",
+            ".hpp"
+        ],
+        "workbench.colorCustomizations": {
+            "minimapSlider.hoverBackground": "#00830075",
+            "minimapSlider.background": "#00830075"
+        },
+        "lldb.launch.expressions": "native",
+        /* Settings for Compiler Explorer plugin, but did not work great...
+        "compiler-explorer.include" : [
+            "${workspaceFolder}/deps/include", 
+            "${workspaceFolder}/src", 
+            "${workspaceFolder}"
+        ],
+        //"compiler-explorer.debug": true,
+        //"compiler-explorer.url": "https://godbolt.org",//http://localhost:10240
+        "compiler-explorer.url": "http://localhost:10240",
+        "compiler-explorer.options": [
+            "-O3",
+            "-std=c++2a"
+        ],
+        "compiler-explorer.compiler": "clangdefault", /// Check available compilers at http://localhost:10240/api/compilers
+        */
+        // "lldb.library": "/usr/lib/liblldb.so.13",
+        // "lldb.adapterEnv": {
+        //     "LLDB_DEBUGSERVER_PATH": "/usr/bin/lldb-server"
+        // }
+        "lldb.showDisassembly": "never",
+        "lldb.dereferencePointers": true,
+        "lldb.consoleMode": "commands",
+        "lldb.displayFormat": "auto",
+        "editor.wordBasedSuggestionsMode": "allDocuments",
+        "debug.console.historySuggestions": false,
+        "editor.suggest.preview": true,
+        "editor.suggest.showStatusBar": true,
+        "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "on",
+            "strings": "on"
+        },
+        "editor.snippetSuggestions": "bottom",
+        "cmake.configureOnEdit": false,
+        "editor.inlayHints.enabled": false,
+        "clang-tidy.compilerArgs": [
+            "-std=c++20"
+        ]
+    },
+    "extensions": {
+        "recommendations": [
+            "vadimcn.vscode-lldb",
+            "mhutchie.git-graph",
+            "donjayamanne.githistory",
+            "eamodio.gitlens",
+            "cheshirekow.cmake-format",
+            "ms-vscode.cmake-tools",
+            "twxs.cmake",
+            "sarper.close-sidebar-on-debug-session-end",
+            "llvm-vs-code-extensions.vscode-clangd",
+            //"amiralizadeh9480.cpp-helper",
+            "jbenden.c-cpp-flylint",
+            "gruntfuggly.activitusbar",
+            "nick-rudenko.back-n-forth",
+            "fooxly.workspace",
+            "devtbi.vscode-cppinsights",
+        ]
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            // To Run without debug: shift+f5 
+            // To avoid warning about not using leaksanitizer and ptrace at the same time, use "(lldb) Debug [No LSan leak warning]" 
+            {
+                "type": "lldb",
+                "request": "launch",
+                "name": "(lldb) Debug",
+                "program": "${command:cmake.launchTargetPath}",
+                "args": [],
+                "env": {
+                    "ASAN_OPTIONS": "detect_leaks=1:halt_on_error=true:strict_string_checks=1:detect_stack_use_after_return=1:check_initialization_order=1:strict_init_order=1",
+                },
+                "cwd": "${workspaceFolder}"
+            },
+            {
+                "type": "lldb",
+                "request": "launch",
+                "name": "(lldb) Debug [No LSan leak warning]",
+                "program": "${command:cmake.launchTargetPath}",
+                "args": [],
+                "env": {
+                    // Do not report on on catching leaks in debug...
+                    "ASAN_OPTIONS": "detect_leaks=0:halt_on_error=true:strict_string_checks=1:detect_stack_use_after_return=1:check_initialization_order=1:strict_init_order=1",
+                },
+                // "postDebugTask": "warn_mem_leak_checking",
+                "cwd": "${workspaceFolder}"
+            }
+        ]
+    }
+}

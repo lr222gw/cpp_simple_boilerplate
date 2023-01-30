@@ -1,5 +1,5 @@
 # cpp_simple_boilerplate
-##what is this?
+## what is this?
 Simple boilerplate project for c++ in unix enviroments.
 !["Picture of the script"](md/picofscript "The script")
 

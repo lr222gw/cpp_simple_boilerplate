@@ -7,6 +7,8 @@ Simple boilerplate project for c++ in unix enviroments.
 - OS: hopefully works on all Linux distros... 
 - VSCode : I think it must be the microsoft one, since it has some proprietary packages
 - Clang : hardcoded into the CmakePresets, also due to the use of sanitizers
+- cmake : buildsystem generator
+- ninja : build system that I've hardcoded in my CMakePresets.json
 - **Feel free to create a github issue if I missed something**
 
 ## Recommendations
